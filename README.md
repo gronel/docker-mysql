@@ -1,13 +1,12 @@
-## Mysql Docker Container
+# Mysql Docker Container
 
-**Running the application to the default docker compose file with dbserver and appserver**
+## Running the application to the default docker compose file 
 * Create a network named mynet _$ docker network create mynet_
 * install Docker Desktop latest version
 * Set contents of your docker-compose.yml 
 * run  docker compose up to start building the container image
 
-Code of Conduct
-RESPECT, RESPONSIBILITY, RELATIONSHIP
+## Code of Conduct RESPECT, RESPONSIBILITY, RELATIONSHIP
 
 * Respect everyones idea.
 * Respect leadership decision.
