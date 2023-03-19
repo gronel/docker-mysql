@@ -1,0 +1,26 @@
+# For more information: https://laravel.com/docs/sail
+version: '3'
+services:
+  my_database:
+    container_name: my_database
+    image: "mysql:5.7"
+    ports:
+      - "$DB_PORT:3306"
+    environment:
+      MYSQL_PORT: $DB_PORT
+      MYSQL_ROOT_PASSWORD: $DB_PASSWORD
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    volumes:
+      - "./data/mysql/init:/docker-entrypoint-initdb.d:delegated"
+      - "./data/mysql/db:/var/lib/mysql:delegated"
+      - "./data/mysql/conf:/etc/mysql/conf.d:delegated"
+    networks:
+      - mynet
+    command: --sql_mode="" --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-p${DB_PASSWORD}" ]
+      retries: 3
+      timeout: 5s
+networks:
+  mynet:
+     external: true

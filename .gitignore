@@ -1,0 +1,5 @@
+
+data/mysql/db/*
+data/mysql/db_dw/*
+data/mysql/db_test/*
+data/mysql/db_test_dw/*

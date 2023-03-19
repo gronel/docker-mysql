@@ -1,0 +1,6 @@
+version: "2"
+syncs:
+  v7-app-sync:
+    src: "${SOURCE_LOCATION}"
+    sync_userid: 34
+    sync_groupid: 34
