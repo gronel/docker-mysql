@@ -3,7 +3,7 @@ version: '3'
 services:
   my_database:
     container_name: my_database
-    image: "mysql:5.7"
+    image: "mysql:8.0"
     ports:
       - "$DB_PORT:3306"
     environment:
