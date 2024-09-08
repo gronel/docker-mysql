@@ -14,3 +14,10 @@
 * Make our product secure,functional and user-friendly while ensuring a strong and healthy team relationship.
 * Respond and be available to answer the questions and needs of the members when required.
 * Users and customers must be attended with utmost respect and consideration.
+
+run this 
+
+docker exec -it my_sql mysql -u root -p
+
+ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'root';
+FLUSH PRIVILEGES;
